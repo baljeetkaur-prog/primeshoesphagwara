@@ -1,0 +1,7 @@
+.about-section-bottom-fix {
+  padding-bottom: 100px !important; /* Reduce bottom padding only */
+}
+
+.about__instagram-wrap {
+  margin-top: -10px; /* Optional: if you want Instagram closer */
+}

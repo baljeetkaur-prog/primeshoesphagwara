@@ -1,0 +1,1063 @@
+/* Orders.css */
+
+/* Scrollable table on small devices */
+.responsive-table-wrapper {
+  width: 100vw;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Product info layout adjusts on smaller screens */
+.order-product-info {
+  gap: 12px;
+}
+
+
+.rate-btn-table:hover {
+  background-color: #a21010;
+}
+
+/* Rate Product Button - Mobile View */
+.rate-btn-mobile {
+  background-color: #ca1515;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-top: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.rate-btn-mobile:hover {
+  background-color: #a21010;
+}
+
+/* Order Status Badge */
+.order-status-badge {
+  background-color: #f3f4f6;
+  color: #ca1515;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #ca1515;
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+/* Keep text white on all link states */
+.rate-btn-table:link,
+.rate-btn-table:visited,
+.rate-btn-table:active,
+.rate-btn-table:focus {
+  color: white;
+  text-decoration: none;
+}
+
+
+.rate-btn-table:hover {
+  background-color: #000;
+}
+
+.rate-btn-table.disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.mobile-status-badge {
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+/* Mobile & general: Rate Product Button */
+.rate-btn,
+.rate-btn-mobile {
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.rate-btn:hover,
+.rate-btn-mobile:hover {
+  background-color: #000;
+}
+
+.rate-btn.disabled,
+.rate-btn-mobile.disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .order-product-info {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .order-product-info img {
+    width: 100% !important;
+    max-width: 100px;
+    height: auto !important;
+    margin-bottom: 8px;
+  }
+
+  .orders-table td,
+  .orders-table th {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+  }
+
+  .pagination-btn {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Badge styling */
+.orders-table .badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Table formatting */
+.orders-table {
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.orders-table th {
+  background-color: #f8f8f8;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.orders-table td,
+.orders-table th {
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* Pagination */
+.product__pagination .pagination-btn {
+  transition: all 0.3s ease;
+}
+
+.product__pagination .pagination-btn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+/* Orders.css */
+
+/* Hide table view and show card view on small screens */
+@media (max-width: 768px) {
+  .orders-table {
+    display: none;
+  }
+
+  .order-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .order-card-header {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .order-card-product {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .order-card-product img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 12px;
+  }
+
+  .order-card-product-details {
+    font-size: 14px;
+  }
+
+  .order-card-footer {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .order-card-footer div {
+    margin-bottom: 6px;
+  }
+}
+/* Unified Rate Button Styles for Mobile & Desktop */
+.rate-btn,
+.rate-btn-mobile,
+.rate-btn-table {
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  margin-top: 10px;
+  -webkit-tap-highlight-color: transparent; /* ✅ Remove blue on mobile tap */
+}
+
+/* Hover Effects */
+.rate-btn:hover,
+.rate-btn-mobile:hover,
+.rate-btn-table:hover {
+  background-color: #000;
+}
+
+/* Active/Focus State Fix */
+.rate-btn:link,
+.rate-btn:visited,
+.rate-btn:focus,
+.rate-btn:active,
+.rate-btn-mobile:link,
+.rate-btn-mobile:visited,
+.rate-btn-mobile:focus,
+.rate-btn-mobile:active,
+.rate-btn-table:link,
+.rate-btn-table:visited,
+.rate-btn-table:focus,
+.rate-btn-table:active {
+  color: #fff !important;        /* ✅ Always white text */
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Disabled State */
+.rate-btn.disabled,
+.rate-btn-mobile.disabled,
+.rate-btn-table.disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.rate-btn-table, .rate-btn-mobile {
+  background-color: #000;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.rate-btn-table.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.rate-btn-table,
+.cancel-btn-table,
+.return-btn-table {
+  background-color: #000;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 3px 0;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.rate-btn-table:hover,
+.cancel-btn-table:hover,
+.return-btn-table:hover {
+  background-color: #000;
+  color: white;
+}
+
+.rate-btn-table.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mobile versions */
+.rate-btn-mobile,
+.cancel-btn-mobile,
+.return-btn-mobile {
+  background-color: #000;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.rate-btn-mobile:hover,
+.cancel-btn-mobile:hover,
+.return-btn-mobile:hover {
+  background-color: #000;
+}
+/* === Shared Button Styles === */
+.rate-btn-table,
+.cancel-btn-table,
+.return-btn-table,
+.rate-btn-mobile,
+.cancel-btn-mobile,
+.return-btn-mobile,
+.rate-btn {
+  background-color: #000;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* === Hover Effect === */
+.rate-btn-table:hover,
+.cancel-btn-table:hover,
+.return-btn-table:hover,
+.rate-btn-mobile:hover,
+.cancel-btn-mobile:hover,
+.return-btn-mobile:hover,
+.rate-btn:hover {
+  background-color: #000;
+}
+
+/* === Disabled State === */
+.rate-btn-table.disabled,
+.cancel-btn-table.disabled,
+.return-btn-table.disabled,
+.rate-btn-mobile.disabled,
+.cancel-btn-mobile.disabled,
+.return-btn-mobile.disabled,
+.rate-btn.disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* === Link States (no underline, always white) === */
+.rate-btn-table:link,
+.cancel-btn-table:link,
+.return-btn-table:link,
+.rate-btn-mobile:link,
+.cancel-btn-mobile:link,
+.return-btn-mobile:link,
+.rate-btn:link,
+.rate-btn-table:visited,
+.cancel-btn-table:visited,
+.return-btn-table:visited,
+.rate-btn-mobile:visited,
+.cancel-btn-mobile:visited,
+.return-btn-mobile:visited,
+.rate-btn:visited,
+.rate-btn-table:active,
+.cancel-btn-table:active,
+.return-btn-table:active,
+.rate-btn-mobile:active,
+.cancel-btn-mobile:active,
+.return-btn-mobile:active,
+.rate-btn:active,
+.rate-btn-table:focus,
+.cancel-btn-table:focus,
+.return-btn-table:focus,
+.rate-btn-mobile:focus,
+.cancel-btn-mobile:focus,
+.return-btn-mobile:focus,
+.rate-btn:focus {
+  color: white !important;
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: none;
+}
+.mobile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.mobile-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.mobile-modal h5 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.mobile-modal textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn,
+.confirm-btn {
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+}
+
+.confirm-btn {
+  background: #EC6C1D;
+  color: #fff;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.full-width-table-wrapper {
+  width: 100vw; /* full viewport width */
+  margin-left: calc(-50vw + 50%); /* cancel container padding */
+  overflow-x: auto; /* scroll on very small screens */
+  padding: 0 25px; 
+}
+
+.responsive-table-wrapper {
+  width: 100%;
+}
+
+.orders-table {
+  width: 100%; /* table takes full width */
+  min-width: 900px; /* optional, prevent squeezing */
+  table-layout: auto;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
+.order-notes {
+  margin: 20px auto;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  max-width: 700px;
+  background: #f5f5f5;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.order-notes-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.order-notes-icon {
+  color: #000;
+  font-size: 18px;
+}
+
+.order-notes-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+  text-align: left;
+  display: inline-block;
+}
+
+.order-notes-list li span {
+  color: red;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .order-notes {
+    padding: 12px 15px;
+    max-width: 90%;
+  }
+
+  .order-notes-title {
+    font-size: 15px;
+    gap: 6px;
+  }
+
+  .order-notes-icon {
+    font-size: 16px;
+  }
+
+  .order-notes-list {
+    line-height: 1.6;
+  }
+
+  .order-notes-list li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-notes {
+    padding: 10px 12px;
+  }
+
+  .order-notes-title {
+    font-size: 14px;
+  }
+
+  .order-notes-list li {
+    font-size: 12px;
+  }
+}
+.full-width-table-wrapper {
+  width: 100%;             /* ✅ replace 100vw */
+  max-width: 1500px;       /* ✅ keeps it neat on ultrawide monitors */
+  margin: 0 auto;          /* ✅ center the table */
+  overflow-x: auto;        /* ✅ scroll on small screens */
+  padding: 0 20px;         /* safe inner padding */
+  box-sizing: border-box;
+}
+
+.responsive-table-wrapper {
+  width: 100%;             /* ✅ no more 100vw */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.orders-table {
+  width: 100%;             /* table takes full width */
+  min-width: 900px;        /* prevents squeezing */
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
+.status-badge {
+  display: inline-block;
+  min-width: 90px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background: #212529;
+}
+
+.status-badge.processing {
+  background: #6f42c1;
+}
+
+.status-badge.shipped {
+  background: #0d6efd;
+}
+
+.status-badge.delivered {
+  background: #198754;
+}
+
+.status-badge.returned {
+  background: #fd7e14;
+}
+
+.status-badge.cancelled {
+  background: #dc3545;
+}
+
+/* ================================
+   ORDER PRICE DETAILS
+================================ */
+
+.order-price-cell {
+  min-width: 140px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.order-price-main {
+  font-size: 16px;
+  font-weight: 700;
+  color: #171717;
+  white-space: nowrap;
+}
+
+.order-price-details {
+  margin-top: 8px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.order-price-details summary {
+  color: #555;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.order-price-details summary:hover {
+  color: #ec6c1d;
+}
+
+.order-price-breakdown {
+  width: 100%;
+  min-width: 210px;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-price-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 6px 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.order-price-breakdown > div span:first-child {
+  color: #555;
+}
+
+.order-price-breakdown > div span:last-child {
+  color: #171717;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.order-price-breakdown .order-discount {
+  color: #198754 !important;
+}
+
+.order-price-breakdown .order-price-total {
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.order-price-breakdown .order-price-total strong {
+  color: #171717;
+  white-space: nowrap;
+}
+
+.order-price-breakdown .order-refund-amount {
+  padding-top: 8px;
+  border-top: 1px dashed #ddd;
+}
+
+.order-price-breakdown .order-refund-amount,
+.order-price-breakdown .order-refund-amount strong {
+  color: #198754;
+}
+
+/* ================================
+   MOBILE PRICE DISPLAY
+================================ */
+
+.order-mobile-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  margin: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.order-mobile-price span {
+  color: #555;
+  font-size: 14px;
+}
+
+.order-mobile-price strong {
+  color: #171717;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.order-card .order-price-details {
+  margin: 8px 0 14px;
+}
+
+.order-card .order-price-details summary {
+  text-align: left;
+}
+
+.order-card .order-price-breakdown {
+  min-width: 0;
+}
+
+/* ================================
+   ORDER AND REFUND STATUS
+================================ */
+
+.order-status-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.order-status-list .status-badge {
+  min-width: 90px;
+  max-width: 180px;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.refund-status {
+  display: inline-block;
+  color: #555;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.return-inspection-status {
+  color: #8a5a00;
+  background: #fff4d6;
+  border: 1px solid #f1d99b;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Additional statuses */
+.status-badge.refund-processing,
+.status-badge.processing-refund {
+  background: #6f42c1;
+}
+
+.status-badge.refunded,
+.status-badge.processed {
+  background: #198754;
+}
+
+.status-badge.failed {
+  background: #dc3545;
+}
+
+/* ================================
+   MOBILE LAYOUT
+================================ */
+
+@media (max-width: 767px) {
+  .order-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .order-card-footer {
+    min-width: 0;
+  }
+
+  .order-card-footer .order-status-list {
+    align-items: flex-start;
+  }
+
+  .order-card-footer .order-status-list .status-badge {
+    max-width: 100%;
+  }
+
+  .order-card-footer .order-price-breakdown > div {
+    gap: 10px;
+  }
+
+  .order-card-footer .rate-btn-mobile,
+  .order-card-footer .cancel-btn-mobile,
+  .order-card-footer .return-btn-mobile {
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .order-notes {
+    width: 90%;
+    box-sizing: border-box;
+  }
+}
+
+/* Desktop table */
+@media (min-width: 768px) {
+  .orders-table .order-price-details {
+    position: relative;
+  }
+
+  .orders-table .order-price-details[open] .order-price-breakdown {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+  }
+}
+
+/* Keep action buttons compact inside the desktop table */
+@media (min-width: 768px) {
+  .orders-table .rate-btn-table,
+  .orders-table .cancel-btn-table,
+  .orders-table .return-btn-table {
+    width: auto;
+    min-width: 65px;
+    box-sizing: border-box;
+  }
+}
+
+/* Modern Orders Pagination */
+.orders-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px auto 20px;
+}
+
+.orders-pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease;
+}
+
+.orders-pagination .pagination-number.active {
+  background: #ec6c1d;
+  border-color: #ec6c1d;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(236, 108, 29, 0.22);
+}
+
+.orders-pagination button:not(:disabled):hover {
+  border-color: #ec6c1d;
+  color: #ec6c1d;
+}
+
+.orders-pagination .pagination-number.active:hover {
+  background: #d95b12;
+  border-color: #d95b12;
+  color: #fff;
+}
+
+.orders-pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.orders-pagination .pagination-arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .orders-pagination {
+    gap: 6px;
+    margin-top: 22px;
+  }
+
+  .orders-pagination button {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 9px;
+    border-radius: 8px;
+  }
+}
+.receipt-download-btn {
+  display: inline-block;
+  margin: 8px 4px;
+  padding: 10px 14px;
+  background: #ec6c1d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.receipt-download-btn:hover {
+  background: #d9570b;
+}
+
+.receipt-download-btn:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .receipt-download-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+/* Download PDF receipt button */
+.receipt-download-btn {
+  display: inline-block;
+  margin: 8px 4px;
+  padding: 9px 12px;
+  background: #ec6c1d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.receipt-download-btn:hover {
+  background: #d9570b;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .order-card-footer .receipt-download-btn {
+    width: 100%;
+    margin: 12px 0 4px;
+    padding: 11px;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+
+
+

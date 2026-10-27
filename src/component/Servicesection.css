@@ -1,0 +1,77 @@
+.fservice-section {
+  width: 100vw;              
+  padding: 50px 0;           
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.fservice-section .fservice-container {
+  max-width: 1500px;        
+  margin: 0 auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+}
+
+.fservice-card {
+  background-color: white;   
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.fservice-card:hover {
+  cursor: pointer;
+}
+
+.fservice-icon-wrapper {
+  font-size: 40px;
+  color: #ff6a00; 
+}
+
+.fservice-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.fservice-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =================== RESPONSIVE =================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .fservice-section .fservice-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .fservice-section .fservice-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .fservice-card {
+    padding: 15px;
+  }
+
+  .fservice-icon-wrapper {
+    font-size: 30px;
+  }
+
+  .fservice-title {
+    font-size: 16px;
+  }
+
+  .fservice-desc {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,135 @@
+.instagram-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+/* ✅ Add container for centering */
+.instagram-section .insta-container {
+  max-width: 1200px; /* controls max width */
+  margin: 0 auto;    /* centers it */
+  padding: 0 20px;   /* side spacing */
+}
+
+/* Header */
+.insta-header {
+  margin-bottom: 30px;
+}
+
+.insta-header h4 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.insta-header p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.follow-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.follow-btn:hover {
+  background: #333;
+  color: white;
+}
+
+/* Grid Layout */
+.insta-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+/* Card Wrapper */
+.insta-card {
+  position: relative;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.insta-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Image Styling */
+.insta-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ensures full image is visible */
+  border-radius: 8px;
+  background: #fff;
+  display: block;
+}
+
+/* Overlay */
+.insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.insta-overlay .insta-icon {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.insta-overlay span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.insta-card:hover .insta-overlay {
+  opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+.insta-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps heading centered */
+  gap: 8px; /* space between icon and text */
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.insta-heading-icon {
+  font-size: 34px;
+  fill: url(#instagramGradient); /* Apply gradient to SVG */
+  stroke: white;                /* white outline */
+  stroke-width: 8px;
+  paint-order: stroke;          /* makes outline visible behind gradient */
+}

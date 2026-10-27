@@ -1,0 +1,251 @@
+/* ================= Desktop ================= */
+
+.categories-slider {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  background: #111;
+  background-size: cover;
+  background-position: center;
+}
+
+.categories-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.categories-image.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Blurred background */
+
+.categories-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-image) no-repeat center / cover;
+  filter: blur(50px) brightness(0.6);
+  transform: scale(1.15);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================= Arrows ================= */
+
+.categories-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background 0.3s ease;
+}
+
+.categories-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.left-btn {
+  left: 25px;
+}
+
+.right-btn {
+  right: 25px;
+}
+
+/* ================= Slider Dots ================= */
+
+.categories-dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.active-dot {
+  width: 28px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+/* ================= Address Ticker ================= */
+
+.ticker {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ticker__wrap {
+  display: flex;
+  width: max-content;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker__item {
+  flex-shrink: 0;
+  padding-right: 50px;
+  white-space: nowrap;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width: 992px) {
+  .categories-slider {
+    height: 60vh;
+  }
+
+  .categories-image {
+    object-fit: contain;
+    background: transparent;
+  }
+
+  .categories-btn {
+    display: none;
+  }
+
+  .categories-dots {
+    display: flex;
+  }
+
+  .ticker {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .ticker__item {
+    padding-right: 40px;
+  }
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 600px) {
+  .categories-slider {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    /* Height follows the currently displayed image */
+    aspect-ratio: var(--mobile-ratio, 1.5);
+
+    overflow: hidden;
+    background: #111;
+  }
+
+  .categories-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+  }
+
+  .categories-slider::before {
+    filter: blur(25px) brightness(0.5);
+    transform: scale(1.1);
+  }
+
+  .categories-btn {
+    display: none;
+  }
+
+  .categories-dots {
+    display: flex;
+    bottom: 8px;
+    gap: 7px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .active-dot {
+    width: 24px;
+  }
+
+  .ticker {
+    font-size: 14px;
+    padding: 7px 0;
+  }
+
+  .ticker__item {
+    padding-right: 30px;
+  }
+}
+
+/* ================= Reduced Motion ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .categories-image,
+  .categories-btn,
+  .dot {
+    transition: none;
+  }
+
+  .ticker__wrap {
+    animation-duration: 30s;
+  }
+}

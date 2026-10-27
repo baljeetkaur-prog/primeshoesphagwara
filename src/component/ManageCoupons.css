@@ -1,0 +1,359 @@
+/* ===========================
+   Coupon Management Page
+=========================== */
+
+.manage-coupons-container {
+  width: 100%;
+}
+
+.coupon-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===========================
+   Coupon Form
+=========================== */
+
+.coupon-form {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
+}
+
+.coupon-form input,
+.coupon-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.coupon-form input:focus,
+.coupon-form select:focus {
+  outline: none;
+  border-color: #EC6C1D;
+}
+
+.coupon-submit-btn {
+  width: 100%;
+  border: none;
+  background: #EC6C1D;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.coupon-submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===========================
+   Coupon Cards
+=========================== */
+
+.coupon-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 18px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+  height: 100%;
+}
+
+.coupon-card:hover {
+  box-shadow: 0 0 12px rgba(0,0,0,0.12);
+}
+
+.coupon-code {
+  font-size: 18px;
+  font-weight: 700;
+  color: #EC6C1D;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.coupon-info {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.coupon-info strong {
+  font-weight: 600;
+}
+
+.coupon-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.coupon-active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.coupon-inactive {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ===========================
+   Coupon Actions
+=========================== */
+
+.coupon-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.coupon-actions button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.coupon-edit-btn {
+  background: #EC6C1D;
+  color: white;
+}
+
+.coupon-delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.coupon-toggle-btn {
+  background: #212529;
+  color: white;
+}
+
+/* ===========================
+   Coupon Grid
+=========================== */
+
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+  gap: 20px;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .coupon-title {
+    font-size: 18px;
+  }
+
+  .coupon-form {
+    padding: 18px;
+  }
+
+  .coupon-card {
+    padding: 15px;
+  }
+
+  .coupon-code {
+    font-size: 16px;
+  }
+
+  .coupon-actions {
+    flex-direction: column;
+  }
+
+  .coupon-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .coupon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coupon-form input,
+  .coupon-form select {
+    font-size: 13px;
+  }
+}
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:16px;
+}
+
+.form-group label{
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:6px;
+  color:#333;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  outline:none;
+}
+/* ===========================
+   Coupon List Card
+=========================== */
+
+.coupon-list-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.coupon-list-card h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ===========================
+   Table Wrapper
+=========================== */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ===========================
+   Coupon Table
+=========================== */
+
+.coupon-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.coupon-table thead {
+  background: #f8f9fb;
+}
+
+.coupon-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #eee;
+  white-space: nowrap;
+}
+
+.coupon-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.coupon-table tbody tr {
+  transition: 0.3s;
+}
+
+.coupon-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* ===========================
+   Status Badges
+=========================== */
+
+.status-active {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: #e8f9ef;
+  color: #0f9d58;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-inactive {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: #fdecec;
+  color: #dc3545;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Delete Button
+=========================== */
+
+.delete-btn {
+  border: none;
+  background: #dc3545;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #bb2d3b;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .coupon-list-card {
+    padding: 15px;
+  }
+
+  .coupon-table th,
+  .coupon-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .delete-btn {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+}

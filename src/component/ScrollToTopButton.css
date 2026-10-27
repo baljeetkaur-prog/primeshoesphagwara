@@ -1,0 +1,39 @@
+/* Default styles (desktop) */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(236, 108, 29);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .scroll-to-top-btn {
+    width: 40px;        /* slightly smaller */
+    height: 40px;
+    bottom: 20px;       /* closer to bottom */
+    right: 20px;        /* closer to right */
+    font-size: 20px;    /* adjust arrow icon size if using Unicode */
+  }
+
+  .scroll-to-top-btn svg {  /* if using react-icons / svg */
+    width: 18px;  /* scale down slightly */
+    height: 18px;
+  }
+}

@@ -1,0 +1,304 @@
+/* ===========================
+   Product Page & Admin Layout
+=========================== */
+
+/* Admin Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 220px;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 25px 15px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Main Content */
+.admin-main {
+  flex: 1;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   Product Cards
+=========================== */
+.admin-product-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.admin-product-card {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #222;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.06); 
+}
+
+.admin-product-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-product-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px 8px 0 0;
+  background-color: #f9f9f9;
+}
+
+.admin-product-card-body {
+  padding: 14px 16px;
+}
+
+.admin-product-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.admin-product-price-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.admin-original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.admin-discounted-price {
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+}
+
+.admin-product-stock {
+  font-size: 13.5px;
+  font-family: 'Outfit', sans-serif;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-product-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 13.2px;
+}
+
+.stock-in {
+  color: #388e3c; /* Green */
+  font-weight: 500;
+  font-size: 13.2px;
+}
+
+.stock-out {
+  color: #e53935; /* Red */
+  font-weight: 500;
+  font-size: 13.2px;
+}
+
+.admin-product-details p {
+  font-size: 13.5px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.admin-product-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.admin-product-card .btn {
+  font-size: 13px;
+  padding: 6px 12px;
+  margin-top: 8px;
+  margin-right: 8px; 
+  background-color: #EC6C1D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+/* Grid adjustments */
+.row.no-gutters,
+.row.no-gutters > [class*="col-"] {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row.no-gutters > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Responsive Styles
+=========================== */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    width: 180px;
+  }
+
+  .admin-main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+  }
+
+  .admin-main {
+    padding: 10px;
+  }
+
+  .admin-product-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .admin-product-card {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 13px;
+  }
+
+  .admin-product-card img {
+    height: 180px;
+  }
+
+  .admin-product-name {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .admin-product-price-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-product-buttons {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .admin-product-card .btn {
+    width: 80%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .row.no-gutters > [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mb-mobile-gap {
+    margin-bottom: 2rem;
+  }
+
+  .admin-product-card img {
+    height: 160px;
+  }
+
+  .admin-product-card {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .admin-product-card .btn {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .admin-product-stock,
+  .admin-product-label,
+  .stock-in,
+  .stock-out {
+    font-size: 12.5px;
+  }
+}
+.formadmin-container {
+  display: flex;
+  flex-direction: row; /* sidebar left, main content right */
+  width: 100%;
+  min-height: calc(100vh - 60px); /* full height minus topnav */
+}
+
+.formadmin-main {
+  flex: 1; /* take remaining space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* stack form & products vertically */
+  align-items: center; /* center horizontally */
+}
+
+.formadmin-main .contact__form {
+  width: 100%;
+  max-width: 1200px; /* keep form at reasonable width */
+}
+@media (max-width: 992px) {
+  .formadmin-container {
+    flex-direction: column; /* stack sidebar on top */
+  }
+
+  .formadmin-main {
+    align-items: stretch; /* form takes full width */
+    padding: 10px;
+  }
+
+  .formadmin-main .contact__form {
+    max-width: 100%;
+  }
+}
+
+

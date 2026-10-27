@@ -1,0 +1,107 @@
+/* Base Layout */
+.admin-layout .lowstock-main {
+  background-color: #f7f8fa;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.admin-layout .lowstock-title {
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #EC6C1D;;
+  display: inline-block;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* Product Card */
+.admin-layout .lowstock-product {
+  background: #fff;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.admin-layout .lowstock-product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.admin-layout .lowstock-prod-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.admin-layout .lowstock-product p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.admin-layout .lowstock-product .label-out {
+  color: #ca1515;
+  font-weight: 600;
+}
+
+.admin-layout .lowstock-product .label-low {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+/* Input & Button */
+.admin-layout .stock-update-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 6px;
+}
+
+.admin-layout .stock-update-input:focus {
+  border-color: #EC6C1D;;
+  outline: none;
+}
+
+.admin-layout .stock-update-btn {
+  background-color: #EC6C1D;;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.admin-layout .stock-update-btn:hover {
+  background-color: #EC6C1D;;
+  cursor: pointer;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .admin-layout .lowstock-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .admin-layout .lowstock-product {
+    padding: 14px;
+  }
+}

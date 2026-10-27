@@ -1,0 +1,119 @@
+.shop-by-category {
+  text-align: center;
+  margin: 2px 0;
+  padding: 25px 0;  
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* increased spacing */
+  flex-wrap: wrap;
+}
+.category-card {
+  position: relative;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50% / 20%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.category-card:hover img {
+  filter: brightness(1.05); /* subtle glow */
+}
+
+/* Optional: subtle shine effect on hover */
+.category-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  transform: rotate(25deg) translateX(-100%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.category-card:hover::after {
+  transform: rotate(25deg) translateX(100%);
+}
+
+.category-card h4 {
+  margin: 10px 0 5px;
+  font-size: 17px; 
+}
+
+.category-card p {
+  margin: 0 0 10px;
+  color: gray;
+  font-size: 14px;
+}
+
+.category-card a,
+.category-card .shop-now-btn {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 16px; 
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .category-card {
+    width: 180px;
+  }
+
+  .category-card img {
+    height: 220px;
+  }
+
+  .category-card h4 {
+    font-size: 15px;
+  }
+
+  .category-card a,
+  .category-card .shop-now-btn {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-card {
+    width: 140px;
+  }
+
+  .category-card img {
+    height: 160px;
+  }
+
+  .category-card h4 {
+    font-size: 13px;
+  }
+
+  .category-card a,
+  .category-card .shop-now-btn {
+    font-size: 12px;
+  }
+
+  .category-grid {
+    gap: 8px;
+  }
+}

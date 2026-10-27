@@ -1,0 +1,209 @@
+/* Full-width section background without shifting */
+.trend__content {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+.trend__content.trend-grey {
+  background-color: #f5f5f5;
+}
+
+.trend__content.trend-white {
+  background-color: #fff;
+}
+
+/* Inner container for cards: CSS Grid */
+.trend__content .trend-container {
+  width: 100%;
+  margin: 0;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 30px; /* maybe add some row gap here */
+}
+
+@media (max-width: 992px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+  }
+}
+
+/* Section title stays full width and centered */
+.trend__content .section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.trend-grey {
+  background-color: #f5f5f5; /* soft grey */
+}
+
+.trend-white {
+  background-color: #ffffff; /* white */
+}
+
+.trend__content.no-gap {
+  margin-bottom: 0;  /* remove space under section */
+  padding-bottom: 40px; /* keep uniform spacing if needed */
+}
+
+.trend__content.no-gap + .trend__content.no-gap {
+  margin-top: 0; /* remove space between sections */
+}
+/* Full-width section background */
+.trend__content {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+/* ✅ Only limit width + center on very large screens */
+
+
+.trend__content.trend-grey {
+  background-color: #f5f5f5;
+}
+
+.trend__content.trend-white {
+  background-color: #fff;
+}
+
+/* Inner container for cards */
+.trend__content .trend-container {
+  width: 100%;
+  margin: 0;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Section title stays centered */
+.trend__content .section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.trend-grey {
+  background-color: #f5f5f5;
+}
+
+.trend-white {
+  background-color: #ffffff;
+}
+
+.trend__content.no-gap {
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+.trend__content.no-gap + .trend__content.no-gap {
+  margin-top: 0;
+}
+/* Full-width section background */
+.trend__content {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+/* ✅ Keep background full-width, only limit inner container */
+.trend__content .section-title,
+.trend__content .trend-container {
+  max-width: 1400px;   /* adjust as needed */
+  margin: 0 auto;
+}
+
+.trend__content.trend-grey {
+  background-color: #f5f5f5;
+}
+
+.trend__content.trend-white {
+  background-color: #fff;
+}
+
+/* Inner container for cards */
+.trend__content .trend-container {
+  width: 100%;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .trend__content .trend-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Section title stays centered */
+.trend__content .section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 25px;
+}
+
+.trend__content.no-gap {
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+.trend__content.no-gap + .trend__content.no-gap {
+  margin-top: 0;
+}
+
+
+
+
+

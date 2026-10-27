@@ -1,0 +1,115 @@
+
+.view-more-btn {
+  font-size: 16px; /* font size */
+  color: rgb(236, 108, 29); /* orange color */
+  text-decoration: underline; /* show underline */
+  text-underline-offset: 4px; /* space between text and underline */
+  cursor: pointer; /* pointer on hover */
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+  color: rgb(200, 80, 20); /* slightly darker orange on hover */
+    text-decoration: underline; /* show underline */
+  text-underline-offset: 4px; 
+}
+
+/* Productsection.css */
+
+/* Only for small screens */
+@media (max-width: 576px) {
+  .filter__controls {
+    display: flex;
+    flex-wrap: nowrap;       /* prevent wrapping */
+    overflow-x: auto;        /* allow horizontal scroll */
+    gap: 10px;               /* spacing between items */
+    padding: 0 0 10px 0;     /* top 0, right 0, bottom 10px, left 0 */
+    margin: 0;
+    list-style: none;
+
+    /* Hide scrollbar for all browsers */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  .filter__controls::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+
+  .filter__controls li {
+    white-space: nowrap;       /* prevent text from breaking */
+    font-size: 14px;           /* smaller font for small screens */
+  }
+}
+.product.spad {
+  width: 100%;          /* full width by default */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;            /* no auto-centering by default */
+}
+
+/* ✅ Only on very large screens, add centering + max-width */
+@media (min-width: 1600px) {
+  .product.spad {
+    max-width: 1400px;   /* adjust width as you like */
+    margin: 0 auto;      /* center it */
+  }
+}
+
+/* Keep filters aligned to right inside their col */
+.filter__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Skeleton loader animation */
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Skeleton card */
+.skeleton-card {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skeleton-image {
+  height: 200px;
+  width: 100%;
+}
+
+.skeleton-text {
+  height: 15px;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+.skeleton-price {
+  height: 20px;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+/* Remove all rounded corners from product cards */
+.product__item,
+.product__item__pic,
+.product__item__text,
+.product__hover,
+.product__hover li a {
+  border-radius: 0 !important;
+}
